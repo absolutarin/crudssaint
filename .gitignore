@@ -1,0 +1,11 @@
+# Compiled ovject files, static or dynamic libraries, objects etc
+*.o
+*.a
+*.so
+
+*.dmg
+*.exe
+
+.sublime-workspace
+.vscode
+.gitignore
