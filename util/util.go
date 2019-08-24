@@ -11,7 +11,7 @@ func Message(status bool, message string) (map[string]interface{}) {
 }
 
 // Respond function takes in a response write with HTTP data
-func Respond(w http.ResponseWriter, data map[string] interface{})  {
-	w.Header().Add("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(data)
+func Respond(respWr http.ResponseWriter, data map[string] interface{})  {
+	respWr.Header().Add("Content-Type", "application/json")
+	json.NewEncoder(respWr).Encode(data)
 }
