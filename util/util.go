@@ -10,7 +10,7 @@ func Message(status bool, message string) (map[string]interface{}) {
 	return map[string]interface{} {"status" : status, "message" : message}
 }
 
-// Respond function takes in a response write with HTTP data
+// Respond function takes in a response writer with HTTP data and spits out in JSON
 func Respond(respWr http.ResponseWriter, data map[string] interface{})  {
 	respWr.Header().Add("Content-Type", "application/json")
 	json.NewEncoder(respWr).Encode(data)
